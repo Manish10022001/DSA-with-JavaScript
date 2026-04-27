@@ -14,11 +14,22 @@ Approach:
 ● Build and Print: Build the row string and print it.
 */
 
-let n=4;
-for(let i=0; i<n; i++){
-    let row="";
-    for(let j=0; j<=i; j++){
-        row = row + (i+1); //used i as we want repeated number, i.e same number in whole row
-    }
-    console.log(row);
+//Method 1;
+let n = 4;
+for (let i = 0; i < n; i++) {
+  let row = "";
+  for (let j = 0; j <= i; j++) {
+    row = row + (i + 1); //used i as we want repeated number, i.e same number in whole row
+  }
+  console.log(row);
+}
+
+//Method 2: instead of initializing i to 0, we can initialize it to 1 so that we do not need to add +1 in the inner loop
+for (let i = 1; i <= n; i++) {
+  //<=n because i is 1, not zero so we do not need n-1;
+  let row = "";
+  for (let j = 1; j <= i; j++) {
+    row += i;
+  }
+  console.log(row);
 }
