@@ -1,5 +1,5 @@
 /*
-Problem Statement:
+Problem Statement: Count the Number of Digits in an Integer
 Write a function countDigits(n)that takes an integer n and returns how many digits it contains.
 
 Requirements:
