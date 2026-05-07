@@ -4,9 +4,8 @@ Write a function that reverses a string. The input string is given as an array o
 */
 
 let reverseString = function (s) {
-
   let n = s.length; //to get length of array
-  let half = Math.floor(n / 2);
+  let half = Math.floor(n / 2); //for odd numbers
 
   //   for (let i = 0; i < n / 2; i++) {
   for (let i = 0; i < half; i++) {
@@ -16,6 +15,6 @@ let reverseString = function (s) {
     s[n - 1 - i] = temp;
   }
 };
-let num = ["a", "d", "d", "i", "p"];
-reverseString(num);
-console.log(num);
+let str = ["a", "d", "d", "i", "p"];
+reverseString(str);
+console.log(str);
