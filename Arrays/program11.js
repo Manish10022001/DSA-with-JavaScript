@@ -9,7 +9,55 @@ Input:prices = [7, 1, 5, 3, 6, 4]
 Output:5
 */
 
-//brute force
+let maxProfit = function (prices) {
+  let minPrice = prices[0];
+  let maxProfit = 0;
+
+  for (let i = 0; i < prices.length; i++) {
+    //we check if diff. between arr[i]-min is greater than maxProfit, then we will assign that diff to maxProfit
+    if (prices[i] - minPrice > maxProfit) {
+      maxProfit = prices[i] - minPrice;
+    }
+
+    //also we have to keep update the min value
+    if (prices[i] < minPrice) {
+      minPrice = prices[i];
+    }
+  }
+  return maxProfit;
+};
+
+let prices = [7, 1, 5, 3, 6, 4];
+let result = maxProfit(prices);
+console.log(result);
+
+/* Code 2: my version
+function buyAndSell(arr){
+  
+  let min = arr[0];
+  let maxProfit = 0;
+  
+  for(let i=0; i<arr.length; i++){
+    
+    //we check if diff. between arr[i]-min is greater than maxProfit, then we will assign that diff to maxProfit;
+    if(arr[i]-min > maxProfit){
+      maxProfit = arr[i]-min;
+    }
+    
+    //also we have to keep update the min value
+    if(arr[i]<min){
+      min = arr[i];
+    }
+  }
+  return maxProfit;
+}
+let arr = [31,38,35,31,6,4];
+let result = buyAndSell(arr);
+console.log(result);
+*/
+
+//Code 3:brute force
+/*
 var maxProfit = function (prices) {
   let maxProfit = 0;
   for (let i = 0; i < prices.length; i++) {
@@ -24,3 +72,4 @@ var maxProfit = function (prices) {
 let prices = [7, 1, 5, 3, 6, 4];
 let result = maxProfit(prices);
 console.log(result);
+*/
